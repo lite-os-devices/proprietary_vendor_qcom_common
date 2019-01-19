@@ -12,6 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_COPY_FILES += \
+    vendor/qcom/common/proprietary/etc/perf/whitelistedapps.xml:system/etc/perf/whitelistedapps.xml \
+    vendor/qcom/common/proprietary/lib/libqti-at.so:system/lib/libqti-at.so \
+    vendor/qcom/common/proprietary/lib/libqti-util_system.so:system/lib/util_system.so \
+    vendor/qcom/common/proprietary/lib64/libqti-at.so:system/lib64/libqti-at.so \
+    vendor/qcom/common/proprietary/lib64/libqti-util_system.so:system/lib64/util_system.so
 # perf blobs
 PRODUCT_PACKAGES += \
     libqti-perfd-client_system \
