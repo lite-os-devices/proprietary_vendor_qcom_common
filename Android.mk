@@ -16,7 +16,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := QPerformance
-LOCAL_MODULE_OWNER := qti
+LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES := proprietary/framework/QPerformance.jar
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
@@ -26,7 +26,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := UxPerformance
-LOCAL_MODULE_OWNER := qti
+LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES := proprietary/framework/UxPerformance.jar
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
@@ -45,6 +45,16 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libqti-iopd-client_system
+LOCAL_MODULE_OWNER := qti
+LOCAL_SRC_FILES_64 := proprietary/lib64/libqti-iopd-client_system.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libqti-iopd-client_system.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libqti_performance
